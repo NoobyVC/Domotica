@@ -75,7 +75,7 @@ class MyApp extends StatelessWidget {
                 onTap: () {},
               ),
               ListTile(
-                title: Text('Dale mi loco XD ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ'),
+                title: Text('Dale mi loco XD jajagei'),
                 onTap: () {},
               )
             ],
