@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practica5/automatas.dart';
 
 void main() => runApp(const MyApp());
 
@@ -40,7 +41,10 @@ class MainPage extends StatelessWidget {
             ),
             ListTile(
               title: Text('Automatas'),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Automatas()));
+              },
             ),
             ListTile(
               title: Text('Salir'),
