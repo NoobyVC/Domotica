@@ -8,13 +8,45 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
+        title: 'Material App',
+        debugShowCheckedModeBanner: false,
+        home: MainPage());
+  }
+}
+
+class MainPage extends StatelessWidget {
+  const MainPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Mas Apps dentro de una :o'),
+        backgroundColor: Colors.black38,
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              child: Text('ola'),
+              decoration: BoxDecoration(
+                color: Colors.amber,
+              ),
+            ),
+            ListTile(
+              title: Text('Domotica e Inmotica'),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Automatas'),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Salir'),
+              onTap: () {},
+            ),
+          ],
         ),
       ),
     );
