@@ -18,6 +18,19 @@ class Automatas extends StatelessWidget {
             height: double.infinity,
             fit: BoxFit.cover,
           ),
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              padding: EdgeInsets.all(16),
+              color: Colors.black54,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [Text('Automatas')],
+              ),
+            ),
+          )
         ],
       ),
     );
