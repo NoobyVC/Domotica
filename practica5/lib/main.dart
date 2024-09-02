@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practica5/automatas.dart';
+import 'package:practica5/domotica.dart';
 
 void main() => runApp(const MyApp());
 
@@ -37,7 +38,10 @@ class MainPage extends StatelessWidget {
             ),
             ListTile(
               title: Text('Domotica e Inmotica'),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => domotica()));
+              },
             ),
             ListTile(
               title: Text('Automatas'),
