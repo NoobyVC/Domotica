@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class drones extends StatelessWidget {
-  const drones({super.key});
+class sarp extends StatelessWidget {
+  const sarp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Drones'),
+        title: const Text('Seguridad de Acceso a Redes Publicas'),
         backgroundColor: Colors.black38,
       ),
       body: Stack(
@@ -19,12 +19,12 @@ class drones extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: Image.asset('asset/images/dron.jpg'), // Imagen local
+                  child: Image.asset('asset/images/sarp.jpeg'), // Imagen local
                 ),
                 const SizedBox(
                     height: 16.0), // Espacio entre la imagen y el texto
                 const Text(
-                  'Los drones son vehículos aéreos no tripulados (VANT) que pueden ser controlados de forma remota o operar de manera autónoma mediante programación y sensores. Se utilizan en una amplia variedad de aplicaciones, desde la vigilancia hasta la entrega de paquetes.',
+                  'Se refiere a las medidas y tecnologías utilizadas para proteger las redes públicas (como Wi-Fi y redes móviles) contra accesos no autorizados y amenazas. Estas medidas incluyen autenticación, cifrado de datos y controles de acceso para asegurar la integridad, confidencialidad y disponibilidad de la información en redes abiertas.',
                   style: TextStyle(
                     fontSize: 14.0, // Ajusta el tamaño del texto
                     fontWeight: FontWeight.bold,
