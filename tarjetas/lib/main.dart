@@ -34,8 +34,11 @@ class cardimage extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Ink.image(
-              image: NetworkImage(
-                  'https://upload.wikimedia.org/wikipedia/commons/4/47/CUC_LOGO.png'))
+            image: NetworkImage(
+                'https://upload.wikimedia.org/wikipedia/commons/4/47/CUC_LOGO.png'),
+            height: 240,
+            fit: BoxFit.cover,
+          )
         ],
       ),
     );
