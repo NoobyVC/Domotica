@@ -11,12 +11,13 @@ class MyApp extends StatelessWidget {
       title: 'Tarjetas',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Uso de tarjetas'),
-          backgroundColor: Colors.blue,
-        ),
-        body: const Center(),
-      ),
+          appBar: AppBar(
+            title: const Text('Uso de tarjetas'),
+            backgroundColor: Colors.blue,
+          ),
+          body: ListView(
+            children: [cardimage()],
+          )),
     );
   }
 }
