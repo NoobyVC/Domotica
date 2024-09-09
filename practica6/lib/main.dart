@@ -14,9 +14,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Material App',
-        debugShowCheckedModeBanner: false,
-        home: MainPage());
+      title: 'Material App',
+      debugShowCheckedModeBanner: false,
+      home: const MainPage(),
+    );
   }
 }
 
@@ -27,18 +28,17 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Aplicación Movil Test #1'),
+        title: const Text('Aplicación Movil Test #1'),
         backgroundColor: Colors.black38,
       ),
       body: Stack(
         children: [
           Center(
             child: Padding(
-              padding:
-                  const EdgeInsets.all(16.0), // Ajusta el padding a tu gusto
+              padding: const EdgeInsets.all(16.0),
               child: Image.network(
                 'https://upload.wikimedia.org/wikipedia/commons/4/47/CUC_LOGO.png',
-                fit: BoxFit.contain, // Ajusta cómo se debe mostrar la imagen
+                fit: BoxFit.contain,
               ),
             ),
           ),
@@ -48,7 +48,7 @@ class MainPage extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            UserAccountsDrawerHeader(
+            const UserAccountsDrawerHeader(
               accountName: Text('Usuario'),
               accountEmail: null,
               currentAccountPicture: CircleAvatar(
@@ -60,53 +60,63 @@ class MainPage extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.schedule),
-              title: Text('Mi Horario'),
+              leading: const Icon(Icons.schedule),
+              title: const Text('Mi Horario'),
             ),
             const Divider(),
             ListTile(
-              leading: Icon(Icons.school),
-              title: Text('Domotica e Inmotica'),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => domotica()));
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.school),
-              title: Text('Seguridad de Acceso a Redes Publicas'),
+              leading: const Icon(Icons.school),
+              title: const Text('Domotica e Inmotica'),
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => sarp()));
+                  context,
+                  MaterialPageRoute(builder: (context) => const domotica()),
+                );
               },
             ),
             ListTile(
-              leading: Icon(Icons.school),
-              title: Text('Comunicación Digital'),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => comunicacion()));
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.school),
-              title: Text('Drones'),
+              leading: const Icon(Icons.school),
+              title: const Text('Seguridad de Acceso a Redes Publicas'),
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => drones()));
+                  context,
+                  MaterialPageRoute(builder: (context) => const sarp()),
+                );
               },
             ),
             ListTile(
-              leading: Icon(Icons.school),
-              title: Text('Informatica Forense'),
+              leading: const Icon(Icons.school),
+              title: const Text('Comunicación Digital'),
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => informatica()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const comunicacion()),
+                );
               },
             ),
             ListTile(
-              leading: Icon(Icons.exit_to_app),
-              title: Text('Salir'),
+              leading: const Icon(Icons.school),
+              title: const Text('Drones'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const drones()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.school),
+              title: const Text('Informatica Forense'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const informatica()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.exit_to_app),
+              title: const Text('Salir'),
               onTap: () {
                 SystemNavigator.pop();
               },
