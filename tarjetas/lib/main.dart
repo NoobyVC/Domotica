@@ -12,12 +12,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Material App Bar'),
+          title: const Text('Uso de tarjetas'),
           backgroundColor: Colors.blue,
         ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
+        body: const Center(),
       ),
     );
   }
