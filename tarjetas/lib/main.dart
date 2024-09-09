@@ -30,6 +30,14 @@ class cardimage extends StatelessWidget {
     return Card(
       clipBehavior: Clip.antiAlias,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Ink.image(
+              image: NetworkImage(
+                  'https://upload.wikimedia.org/wikipedia/commons/4/47/CUC_LOGO.png'))
+        ],
+      ),
     );
   }
 }
