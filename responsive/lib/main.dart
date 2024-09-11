@@ -8,16 +8,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Material App',
+        home: responsiveDrawe());
   }
 }
 
@@ -29,6 +22,7 @@ class responsiveDrawe extends StatelessWidget {
     final ancho = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.blue,
           title: Text('Coso responsivo'),
         ),
         drawer: ancho < 600 ? movil() : tableta());
