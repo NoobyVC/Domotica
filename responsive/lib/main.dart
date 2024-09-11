@@ -40,7 +40,16 @@ class movil extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Drawer(
+      child: ListView(
+        children: [
+          ListTile(
+            leading: Icon(Icons.home),
+            title: Text('Inicio Movil'),
+          )
+        ],
+      ),
+    );
   }
 }
 
@@ -49,6 +58,15 @@ class tableta extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Drawer(
+      child: ListView(
+        children: [
+          ListTile(
+            leading: Icon(Icons.home),
+            title: Text('Inicio tableta'),
+          )
+        ],
+      ),
+    );
   }
 }
