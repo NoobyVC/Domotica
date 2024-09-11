@@ -20,3 +20,34 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+class responsiveDrawe extends StatelessWidget {
+  const responsiveDrawe({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Coso responsivo'),
+      ),
+    );
+  }
+}
+
+class movil extends StatelessWidget {
+  const movil({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+class tableta extends StatelessWidget {
+  const tableta({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
