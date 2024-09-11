@@ -26,11 +26,12 @@ class responsiveDrawe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ancho = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Coso responsivo'),
-      ),
-    );
+        appBar: AppBar(
+          title: Text('Coso responsivo'),
+        ),
+        drawer: ancho < 600 ? movil() : tableta());
   }
 }
 
