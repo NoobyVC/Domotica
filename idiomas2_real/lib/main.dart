@@ -23,7 +23,10 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('uwu'),
+        title: Text('Lenguaje'),
+      ),
+      body: Center(
+        child: Text('Hola bro'),
       ),
     );
   }
