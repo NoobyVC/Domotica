@@ -7,7 +7,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Material App', home: MenuPrincipal());
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Material App',
+        home: MenuPrincipal());
   }
 }
 
@@ -22,6 +25,7 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue,
       appBar: AppBar(
         title: Text('Lenguaje'),
       ),
