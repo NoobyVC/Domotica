@@ -31,7 +31,7 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
     return Scaffold(
       backgroundColor: Colors.blue,
       appBar: AppBar(
-        title: Text('Lenguaje'),
+        title: Text('Language'),
       ),
       body: Center(
         child: Text(AppLocalizations.of(context)!.massage),
