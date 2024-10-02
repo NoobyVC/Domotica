@@ -33,6 +33,25 @@ class _listasIpState extends State<listasIp> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Ojo, listas on line 🫵😂'),
+        backgroundColor: Colors.blueGrey,
+      ),
+      body: ListView.builder(
+        itemCount: devices.length,
+        itemBuilder: (context, index) {
+          return Card(
+            elevation: 5,
+            margin: EdgeInsets.all(10),
+            child: ListTile(
+              leading: Icon(Icons.device_hub),
+              title: Text(devices[index]['Name']!),
+              subtitle: Text('IP: ${devices[index]['IP:']}'),
+            ),
+          );
+        },
+      ),
+    );
   }
 }
