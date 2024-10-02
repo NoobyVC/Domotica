@@ -9,14 +9,22 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      home: listasIp(),
     );
+  }
+}
+
+class listasIp extends StatefulWidget {
+  const listasIp({super.key});
+
+  @override
+  State<listasIp> createState() => _listasIpState();
+}
+
+class _listasIpState extends State<listasIp> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
