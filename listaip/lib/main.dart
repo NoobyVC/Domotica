@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
+      title: 'Monitero de Redes',
       debugShowCheckedModeBanner: false,
       home: listasIp(),
     );
@@ -23,6 +23,14 @@ class listasIp extends StatefulWidget {
 }
 
 class _listasIpState extends State<listasIp> {
+  final List<Map<String, String>> devices = [
+    {'Name': 'PC-01', 'IP:': '0.0.0.0'},
+    {'Name': 'PC-02', 'IP:': '0.0.0.0'},
+    {'Name': 'PC-03', 'IP:': '0.0.0.0'},
+    {'Name': 'PC-04', 'IP:': '0.0.0.0'},
+    {'Name': 'PC-05', 'IP:': '0.0.0.0'},
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container();
