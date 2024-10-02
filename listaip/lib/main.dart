@@ -52,6 +52,11 @@ class _listasIpState extends State<listasIp> {
           );
         },
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.refresh),
+        tooltip: 'Actualizar lista de Red',
+      ),
     );
   }
 }
