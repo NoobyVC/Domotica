@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
@@ -24,6 +25,14 @@ class AsistenteVoz extends StatefulWidget {
 }
 
 class _AsistenteVozState extends State<AsistenteVoz> {
+  FlutterTts bing_chilling = FlutterTts();
+  String speako = "Hola uwu";
+  Future<void> _speek() async {
+    await bing_chilling.setLanguage("es-ES");
+    await bing_chilling.setPitch(1);
+    await bing_chilling.speak(speako);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
