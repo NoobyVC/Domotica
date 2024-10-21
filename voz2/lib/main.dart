@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
@@ -29,8 +28,9 @@ class _AsistenteVozState extends State<AsistenteVoz> {
   String speako = "Hola uwu";
   Future<void> _speek() async {
     await bing_chilling.setLanguage("es-ES");
-    await bing_chilling.setPitch(1);
+    await bing_chilling.setPitch(10.0);
     await bing_chilling.speak(speako);
+    await bing_chilling.setVolume(5);
   }
 
   @override
@@ -48,12 +48,17 @@ class _AsistenteVozState extends State<AsistenteVoz> {
             TextField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(), labelText: "Bienvenute"),
+              onChanged: (String value) {
+                setState(() {
+                  speako = value;
+                });
+              },
             ),
             SizedBox(
               height: 30,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: _speek,
               child: Text('Habla'),
             )
           ],
